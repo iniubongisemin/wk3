@@ -15,7 +15,7 @@ def outer_function():
     return inner_function
 
 homework = outer_function()
-# print(homework()) # notice that to access the function you have to put the "()" in the print function!
+print(homework()) # notice that to access the function you have to put the "()" in the print function!
 
 # nested functions revised 
 def outer_function():
@@ -54,7 +54,7 @@ def my_decorator_func(func):
     return wrapper_func
 
 # to use a decorator, you attach it to a function as demonstrated below 
-# we use a     ''     by placing the name of the decorator directly above the function you want to use it on and prefix the decorator function with a "@" symbol 
+# we use a     ''     by placing the name of the decorator directly above the function you want to use it on and prefix the decorator function with an "@" symbol 
 @my_decorator_func
 def my_func():
 
@@ -105,17 +105,17 @@ print(my_function.__name__)
 print(my_function.__doc__)
   
 # ex1
-# def add_message(func):
-#     def inner_func(name):   
-#         print('i am the extra message')
-#         return func(name)
-#     return inner_func
+def add_message(func):
+    def inner_func(name):   
+        print('i am the extra message')
+        return func(name)
+    return inner_func
 
-# def to_uppercase(func):
-#     def to_capital(name):         
-#         value = func(name)
-#         return value.upper()
-#     return to_capital
+def to_uppercase(func):
+    def to_capital(name):         
+        value = func(name)
+        return value.upper()
+    return to_capital
 
 # @add_message 
 # @to_uppercase 
